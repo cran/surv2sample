@@ -1,8 +1,10 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
-
 # Export all names
 exportPattern(".")
+
+# put in a namespace for the C files
+# without this line the C functions can't be found
+# which is a problem!
+useDynLib('surv2sample')
 
 # Import all packages listed as Imports or Depends
 import(
